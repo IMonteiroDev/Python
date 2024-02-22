@@ -21,7 +21,10 @@ lista_enumerada = enumerate(lista)
 print(lista_enumerada)
 
 
-lista_enumerada = list(enumerate(lista))
+lista_enumerada = list(enumerate(lista)) #A função List faz a conversão de enumerate para oq realmente há na lista e enumerate enumera a lista em questão nesse exemplo
 
 print(lista_enumerada)
 
+# Neste código há o desempacotamento q já há no Python, seria um For dentro de outro for
+# for indice, nome in enumerate(lista):
+#     print(indice, nome)
