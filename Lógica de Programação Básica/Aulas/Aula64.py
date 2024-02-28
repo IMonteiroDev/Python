@@ -26,29 +26,15 @@ O segundo dígito do CPF é 0
 """
 # cpf = '36440847007'  # Esse CPF gera o primeiro dígito como 10 (0)
 
-import re
+import random
 import sys
 
-# A duas formas de trocar o que não é Números sendo ele: replace e re
-# cpf_enviado_usuario = '431.938.138-69'.replace('.','').replace('-','')
+nove_digitos = ''
 
-entrada = input('Informe um CPF: ')
-
-cpf_enviado_usuario = re.sub(
-    r'[^0-9]', #Nessa expressão encontra tudo que não é numeral
-    '',
-    entrada
-    )
-
-teste = entrada== entrada[0]*len(entrada) #Verá se a entrada do valor do usuário é repetido, se sim erro
+for i in range(9):
+    nove_digitos += str(random.randint(0, 9))
 
 
-if teste:
-    print('O valor passado é incorreto!')
-    sys.exit()
-
-
-nove_digitos = cpf_enviado_usuario[:9]
 contador_regressivo_1 = 10
 
 resultado_digito_1 = 0
@@ -70,7 +56,4 @@ digito_2 = digito_2 if digito_2 <= 9 else 0
 
 cpf_gerado_pelo_calculo = f'{nove_digitos}{digito_1}{digito_2}'
 
-if cpf_enviado_usuario == cpf_gerado_pelo_calculo:
-    print(f'{cpf_enviado_usuario} é válido')
-else:
-    print('CPF inválido')
+print(f'CPF gerado é {cpf_gerado_pelo_calculo}')
