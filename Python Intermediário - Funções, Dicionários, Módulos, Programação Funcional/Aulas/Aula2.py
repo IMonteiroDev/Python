@@ -1,9 +1,14 @@
-#\r=return \n= quebra de linha -> CRLF
-
-'''
-Aula sobre Print e de forma como é utilizado
 '''
 
-print(12, 54, 1011, sep="-", end='\r\n');
-print(56, 78, sep='-');
-print(9, 10, sep='-');
+Argumentos Nomeados e não nomeados em Funções Python
+Argumento nomeado tem nome com sinal de igual
+Argumento não nomeado recebe apenas o argumento (valor)
+
+'''
+
+def soma(x, y, z=0):
+    print(f'A soma de {x} + {y} é: {x+y}')
+
+soma(15, 20)
+
+soma(y=30, x=15)
