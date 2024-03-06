@@ -12,3 +12,24 @@ Retorne se o número é par ou ímpar
 '''
 
 
+def multiplicar(*args):
+    total = 0
+    for numero in args:
+        total *=numero
+        
+    return total
+
+def dedos(numero):
+        multiplo = numero%2==0
+    
+        if multiplo:
+            return('Resultado é Par')
+        else:
+            return('Resultado é Impar')
+    
+
+multiplicacao = multiplicar(0,4,4,2,8,5,6,9,8)
+print(multiplicacao)
+
+print(dedos(13))
+

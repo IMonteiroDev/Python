@@ -1,10 +1,16 @@
-# Concatenação
+'''
 
-concatenacao = 'Luiz' + ' ' + 'Otávio';
-print(concatenacao);
+Closure e funções que retornam funções
 
-a_dez_vezes = 'A'*10;
-trez_vezes = 'Luiz'*3;
+'''
 
-print(a_dez_vezes);
-print(trez_vezes)
+def createSalute(msg, name):
+    def salute():
+        return f'{msg}, {name}!'
+    return salute
+
+s1 = createSalute('Good Morning', 'Lucas')
+s2 = createSalute('Good evening', 'Luiz')
+
+print(s1())
+print(s2())

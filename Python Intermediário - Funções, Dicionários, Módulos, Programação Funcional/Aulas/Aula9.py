@@ -1,20 +1,28 @@
-adicao =++10;
-print(adicao);
+"""
 
-subtracao =--10
-print(subtracao);
+Higher Order Functions - Funções que podem receber e/ou retornar outras funções
 
-multi = 10*10;
-print(multi);
+First-Class Functions - Funções que são tratadas como outros tipos de dados comuns (strings, inteiros, etc...)
 
-divi = 10/3;
-print(divi);
+Funções de primeira classe
 
-divisao_inteira =10//3
-print(divisao_inteira);
+"""
 
-exponenciacao = 2**10
-print(exponenciacao);
 
-modulo = 55%2
-print(modulo);
+def saudacao(msg, nome):
+    return f'{msg}, {nome}!'
+
+#tenta descrever oq está a ocorrer nesse código
+# De forma geral no print estamos chamando uma função que usará outra para resultar em seu bom dia, e de forma a discriminar oq já foi passado temos as tuplas para empacotar tudo é ser considerado
+
+
+def executa(funcao, *args):
+    return funcao(*args)
+
+
+print(
+    executa(saudacao, 'Bom dia', 'Luiz')
+)
+print(
+    executa(saudacao, 'Boa noite', 'Maria')
+)
