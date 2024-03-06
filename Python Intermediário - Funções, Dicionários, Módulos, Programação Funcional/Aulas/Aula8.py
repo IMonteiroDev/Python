@@ -1,17 +1,14 @@
-nome="Igor";
-sobrenome="Monteiro";
-idade=92;
-anoNascimento=1932;
-altura=1.82;
+'''
 
-maiorIdade =idade >= 18;
+Exercícios com funções
+
+Crie uma função que multiplica todos os argumentos
+Não nomeados recebidos
+Retorne o total para uma variável e mostre o valor da variável.
+
+Crie uma função fala se um número é par ou impar
+Retorne se o número é par ou ímpar
+
+'''
 
 
-
-
-print('Nome:', nome)
-print('Sobrenome:', sobrenome)
-print('Idade', idade, 'anos')
-print('Ano de nascimento:',anoNascimento)
-print('É maior de idade?', maiorIdade)
-print('Altura em Metros:', altura)
