@@ -1,6 +1,21 @@
-# 1. (n + n)
-# 2. **
-# 3. * / // %
-# 4. + -
-conta_1 = (1 + int(0.5 + 0.5)) ** (5 + 5)
-print(conta_1)
+'''
+
+Exercícios
+Crie funções que duplicam, triplicam e quadruplicam o número recebido como parametro
+
+'''
+
+
+def createMulti(result):
+    def multi(num):
+        return num*result
+    return multi
+
+
+double = createMulti(2)
+triple = createMulti(3)
+quadra = createMulti(4)
+
+print(double(4))
+print(triple(92))
+print(quadra(14))

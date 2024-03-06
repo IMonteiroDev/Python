@@ -4,13 +4,14 @@ Closure e funções que retornam funções
 
 '''
 
-def createSalute(msg, name):
-    def salute():
+def createSalute(msg):
+    def salute(name):
         return f'{msg}, {name}!'
     return salute
 
-s1 = createSalute('Good Morning', 'Lucas')
-s2 = createSalute('Good evening', 'Luiz')
+saidGoodMorning = createSalute('Good Morning')
+haveGoodEvening = createSalute('Good Evening')
 
-print(s1())
-print(s2())
+for name in ['Maria', 'Joana', 'Luiz']:
+    print(saidGoodMorning(name))
+    print(haveGoodEvening(name))
