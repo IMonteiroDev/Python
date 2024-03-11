@@ -41,3 +41,20 @@ lista_de_listas_de_inteiros = [
     
 # Forma realizada pelo professor
 
+def encontraduplicado(listaInt):
+    numCheck = set()
+    fistDuplicate = -1
+    
+    for numero in listaInt:
+        if numero in numCheck:
+            fistDuplicate = numero
+            break
+        
+        numCheck.add(numero)
+    
+    return fistDuplicate
+    
+for lista in lista_de_listas_de_inteiros:
+    print(
+        lista,
+        encontraduplicado(lista))
