@@ -26,12 +26,18 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-for lista in lista_de_listas_de_inteiros:
-    double = 0
-    for duplicadas in lista:
-        if duplicadas == double:
-            print(duplicadas)
-            break
-        else:
-            double = duplicadas
-    print(-1)
+#Código feito por minha autoria!
+
+# for lista in lista_de_listas_de_inteiros:
+#     double = 0
+#     for duplicadas in lista:
+#         if duplicadas == double:
+#             print(duplicadas)
+#             break
+#         else:
+#             double = duplicadas
+#     print(-1)
+    
+    
+# Forma realizada pelo professor
+
