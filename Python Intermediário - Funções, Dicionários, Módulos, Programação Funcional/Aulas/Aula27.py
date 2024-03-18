@@ -1,19 +1,13 @@
-"""
+lista = []
 
-Fatiamento de strings
-    012345678
-    Olá mundo
-    -987654321
-Fatiamento [i:f:p] [::]
-
-i = inicio de qual array irá começar a leitura
-f = ele irá parar no valor informado
-passo = Será a distancia que o programa irá pular para ler
-
-Obs.: a função len retorna a qtd 
-de caracteres da str
-
-"""
-variavel = 'Olá mundo'
-print(len(variavel))
-print(variavel[::-2])
+for x in range(3):
+    for y in range(3):
+        lista.append((x,y))
+        
+    
+lista = [
+    (x,y) 
+    for x in range(3)
+    for y in range(3)
+]
+print(lista)

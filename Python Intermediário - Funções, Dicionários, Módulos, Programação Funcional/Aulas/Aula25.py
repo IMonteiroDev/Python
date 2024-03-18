@@ -1,17 +1,21 @@
 '''
+Introdução à List comprehension 
 
-    Interpolação básica de strings
-    s - string
-    d e i -int
-    f - float
-    x e X - hexadecimal
+Mapeamento de dados em list comprehension
 
 '''
 
-nome = 'xuuh'
-preco = 100.3559832115
-variavel = '%s, o preço é de R$ %.2f' %(nome,preco)
+produtos = [
+    {'nome': 'p1', 'preco': 20,},
+    {'nome': 'p2', 'preco': 10,},
+    {'nome': 'p3', 'preco': 30,},
+]
 
-print(variavel)
+novos_produtos = [
+    {**produto, 'preco': produto['preco']*1.05}
+    if produto['preco']>20 else {**produto}
+    for produto in produtos
+]
 
-print('O hexadecial de %d é %04X ' %(15,15))
+# print(novos_produtos)
+print(*novos_produtos, sep='\n')
