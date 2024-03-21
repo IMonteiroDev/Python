@@ -1,36 +1,38 @@
-"""
-Exercício
-Peça ao usuário para digitar seu nome
-Peça ao usuário para digitar sua idade
-Se nome e idade forem digitados:
-    Exiba:
-        Seu nome é {nome}
-        Seu nome invertido é {nome invertido}
-        Seu nome contém (ou não) espaços
-        Seu nome tem {n} letras
-        A primeira letra do seu nome é {letra}
-        A última letra do seu nome é {letra}
-Se nada for digitado em nome ou idade: 
-    exiba "Desculpe, você deixou campos vazios."
-"""
+'''
 
-nome = input('Informe seu Nome: ')
-idade = input('Informe a sua idade: ')
+Dictionary Comprehension e Set comprehension
 
-idadeInt = int(idade)
+'''
 
+produto = {
+    'nome': 'Caneta Azul',
+    'preco': 2.5,
+    'categoria': 'Escritorio',
+}
 
+# for chaves, valor in produto.items():
+#     print(chaves,valor)
 
-if nome and idade :
-    print(f'Seu nome é {nome}')
-    print(f'Seu nome invertido fica {nome[::-1]}')
-    if '' in nome:
-        print('Seu nome contém espaços')
-    else:
-        print('Seu nome não contém espaços')
-    print(f'Seu nome possuí {len(nome)} letras')
-    print(f'A primeira letra do seu nome é {nome[0]}')
-    print(f'A última letra do seu nome é {nome[-1]}')
-    
-else:
-    print('Desculpe, você deixou campos vazios.')
+dc = {
+    chave: valor.upper()
+    if isinstance(valor, str) else valor
+    for chave, valor
+    in produto.items()
+    if chave !='categoria'
+}
+
+lista = [
+    ('a', 'valor a'),
+    ('b', 'valor a'),
+    ('b', 'valor a'),
+]
+
+dc = {
+    chave: valor
+    for chave, valor in lista
+}
+
+s1={2**i for i in range(10)}
+
+print(s1)
+print(dc)
