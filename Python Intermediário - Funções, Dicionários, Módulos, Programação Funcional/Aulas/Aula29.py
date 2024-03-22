@@ -1,18 +1,16 @@
-"""
+'''
 
-Introdução ao Try/except
-try -> Tentar exercutar o código
-except -> mensagem de algum erro ao tentar exercutar
+isinstance -> Para saber se o Objeto é de determinado tipo
+No caso o isinstance percorre a lista e vê qual é igual ao tipo que esta sendo procurado
+'''
 
-"""
-numero = input('Vou dobrar o valor que for informado: ')
+lista = [
+    'a', 1, 1.1, True, [0,1,2], (1,2),
+    {0,1}, {'nome': 'Luiz'},
+]
 
 
-try:    
-    print(f'String: {numero}')
-    numeInt = int(numero);
-    print(f'Int: {numeInt}')
-    print(f'O dobro do valor {numeInt} é {numeInt*2}') 
-
-except:
-    print('O valor mencionado não é um Número!')
+for item in lista:
+    if isinstance(item,set):
+        item.add(5)
+        print(item, isinstance(item, set))
