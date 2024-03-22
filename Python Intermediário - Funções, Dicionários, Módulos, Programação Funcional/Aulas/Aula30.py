@@ -1,24 +1,39 @@
 '''
-Constante = 'Variáveis' que são inalteradas
-Muitas condições no mesmo if (ruim)
-    <- Contagem de complexidade (ruim)
+
+Valores Truthy e Falsy, tipos mutáveis e imutáveis
+Mutáveis [] {} set()
+Imutáveis () "" 0 0.0 None False range(0, 10)
+
+
+Valores falsy -> valores vazios são tudo considerados falsos, até valores mutaveis e imutáveis
+
 
 '''
 
-velocidade = 61 #Velocidade atual do carro
-local_carro = 100 #local em que o carro está na estrada!
+lista = []
+dicionario = {}
+conjunto = set()
+tupla = ()
+string = ''
+inteiro = 0
+flutuante = 0.0
+nada = None
+falso = False
+intervalo = range(0)
 
-RADAR_1 = 60 #Velocidade máxima do radar 1
-LOCAL_1 = 100 #Local onde o radar 1 está
-RADAR_RANGE = 1 #A distância onde o radar pega
 
-veloc_carr_pass_radar1=velocidade>RADAR_1
+def falsy(valor):
+    return 'falsy'if not valor else 'truthy'
 
 
-if veloc_carr_pass_radar1:
-    print('Velocidade do carro passou do radar 1')
-    
-if local_carro >= (LOCAL_1 - RADAR_RANGE) and \
-    local_carro <= (LOCAL_1 + RADAR_RANGE) and \
-        veloc_carr_pass_radar1:
-        print('Carro multado em radar 1!')
+print(f'TESTE', falsy('TESTE'))
+print(f'{lista=}', falsy(lista))
+print(f'{dicionario=}', falsy(dicionario))
+print(f'{conjunto=}', falsy(conjunto))
+print(f'{tupla=}', falsy(tupla))
+print(f'{string=}', falsy(string))
+print(f'{inteiro=}', falsy(inteiro))
+print(f'{flutuante=}', falsy(flutuante))
+print(f'{nada=}', falsy(nada))
+print(f'{falso=}', falsy(falso))
+print(f'{intervalo=}', falsy(intervalo))
