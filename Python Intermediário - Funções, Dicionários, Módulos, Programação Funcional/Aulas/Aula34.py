@@ -1,19 +1,26 @@
 '''
-Repetições 
-While
 
-Execute uma ação enquanto uma condição for verdadeira
-Loop infinito -> Quando um código não tem fim
+Introdução às Generator functions em Python
+Generator = (n for n in range(1000000))
 
 '''
+# Toda função geradora usa a palavra Yield(return)
+def generator(n=0):
+    yield 1 #Pausou nessa Execução
+    print('Continuando')
+    yield 2 #Pause
+    print('Será q chega?')
+    yield 3
+    print('Fim')
+    return 'Fim'
 
-condicao = True
+gen = generator(n=0)
 
-while condicao:
-    nome = input('Qual o seu nome: ')
-    print(f'Seu nome é {nome}')
-    
-    if nome == 'sair':
-        break
+# print(gen)
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
 
-print('acabou')
+for n in gen:
+    print(n)
