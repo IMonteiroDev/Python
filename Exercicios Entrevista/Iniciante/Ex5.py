@@ -1,0 +1,1 @@
+# Escreva um programa que conte o número de palavras em uma string fornecida pelo usuário.
