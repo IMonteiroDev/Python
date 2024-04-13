@@ -38,3 +38,6 @@ print()
 print(*novosProdutos, sep='\n')
 print()
 print(*precoProdutos, sep='\n')
+
+# reforçar essa materia
+# TODO
