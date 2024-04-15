@@ -14,6 +14,8 @@ def criar_funcao(funcao, x):
         return funcao(x,y)
     return adiar
 
+# De forma banal, a função acima realiza a função e deixa armazenado na memoria o valor de x que foi passado primeiramente e para no return adiar, esperando assim a continuação quando for invocado na segunda vez para complementar o resto da mesma
+
 soma_com_cinco = criar_funcao(soma, 5)
 multiplica_por_dez = criar_funcao(multiplica, 10)
 
