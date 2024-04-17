@@ -3,6 +3,7 @@
 # Funçoes decoradoras são funções que decoram outras funções
 # Decoradores são usados para fazer o Python
 # Usar as funções decoradoras em outras funções
+# Decoradores são "Syntax Sugar" (Açucar Sintático) significa q a linguagem possuem recurso q facilita o uso das funções decoradoras, sem a necessidade de rescreever o código
 
 def createFunction(funct):
     def inter(*args, **kwargs):
@@ -15,13 +16,14 @@ def createFunction(funct):
         return resultado
     return inter
 
+@createFunction #Syntax Sugar aqui.
 def inverteString(string):
+    print(f'{inverteString.__name__}')
     return string[::-1]
 
 def isString(param):
     if not isinstance(param, str):
         raise TypeError('Parametro deve ser uma String')
 
-inverteStringChecandoParametro = createFunction(inverteString)
-invertida = inverteStringChecandoParametro('Olá Mundo') 
+invertida = inverteString('Olá Mundo') 
 print(invertida)
