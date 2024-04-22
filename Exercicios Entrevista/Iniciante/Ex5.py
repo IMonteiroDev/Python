@@ -3,3 +3,4 @@
 palavra = input('Escreva uma frase para saber q quantidade de caracteres no mesmo:\n')
 
 print(f'A Palavra que foi informado tem a quantidade de {len(palavra)}')
+
